@@ -36,10 +36,9 @@ const userWallet = ref(null);
 const connected_address = ref(null);
 provide("connectedAddress", connected_address);
 
-// Dynamic data
 const connectionStatus = ref(false);
 
-let currentApp: any = shallowRef(Wallet);;
+let currentApp: any = shallowRef(Wallet);
 
 onMounted(() => {
   const header = createApp(Header);
