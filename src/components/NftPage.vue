@@ -28,7 +28,10 @@ import Nft from "./Nft.vue";
   gap: 5vh;
   margin-top: 0;
 
-  width: 100%;
+  width: 98%;
   height: 100%;
+
+  margin-right: 1%;
+  margin-left: 1%;
 }
 </style>

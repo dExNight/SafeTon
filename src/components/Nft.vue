@@ -2,7 +2,7 @@
 
 <template>
   <div class="nft-elem">
-    <img src="../assets/nft.png" height="70%" width="80%" />
+    <img src="../assets/nft.png" height="70%" width="160px" />
     <p class="nft-name">Passport</p>
     <p class="suspicion">SCAM</p>
   </div>
@@ -13,18 +13,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
 
-  margin-top: 0;
-  margin-bottom: 0%;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 
   background-color: rgba(51, 51, 51, 0.5); /* 50% прозрачности */
   border-radius: 20px;
   overflow: auto;
 
-  width: 180px;
+  width: 160px;
   height: 245px;
 
   flex-direction: column;
@@ -34,10 +30,12 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 36px;
+
+  overflow: hidden;
 }
 
 img {
-  margin-top: 10%;
+  margin-top: 0;
   margin-bottom: 5%;
 }
 
