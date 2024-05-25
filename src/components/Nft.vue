@@ -35,6 +35,13 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 403px) {
+  .nft-elem {
+    width: 160px;
+    height: 215px;
+  }
+}
+
 img {
   margin-top: 0;
   margin-bottom: 5%;
