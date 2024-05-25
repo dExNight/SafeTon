@@ -2,7 +2,7 @@
 
 <template>
   <div class="nft-elem">
-    <img src="../assets/nft.png" height="70%" width="160px" />
+    <img src="../assets/nft.png" height="70%" width="100%" />
     <p class="nft-name">Passport</p>
     <p class="suspicion">SCAM</p>
   </div>
@@ -20,7 +20,7 @@
   border-radius: 20px;
   overflow: auto;
 
-  width: 160px;
+  width: 180px;
   height: 245px;
 
   flex-direction: column;
@@ -32,6 +32,7 @@
   line-height: 36px;
 
   overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 img {

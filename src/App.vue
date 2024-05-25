@@ -89,8 +89,18 @@ onMounted(() => {
   );
 });
 
-const joinUsImg = "https://imgbly.com/ib/ZG9P9a9zII.jpg";
+const joinUsImg =
+  "https://raw.githubusercontent.com/dExNight/ProjectConfigurations/main/SafeTon/joinTG.jpg";
 const telegramLink = "https://t.me/dex_night";
+
+const GithubImg =
+  "https://raw.githubusercontent.com/dExNight/ProjectConfigurations/main/SafeTon/myGithub.jpg";
+const devGithubLink = "https://github.com/dExNight";
+
+const hackathonImg =
+  "https://raw.githubusercontent.com/dExNight/ProjectConfigurations/main/SafeTon/OLHackathon.jpg";
+const hackathonLink =
+  "https://dorahacks.io/hackathon/the-open-league-hackathon";
 </script>
 
 <template>
@@ -108,9 +118,21 @@ const telegramLink = "https://t.me/dex_night";
     </div>
 
     <div class="slider">
-      <component v-bind:is="Banner" v-bind:imageUrl="joinUsImg" v-bind:link="telegramLink" />
-      <component v-bind:is="Banner" v-bind:imageUrl="joinUsImg" />
-      <component v-bind:is="Banner" v-bind:imageUrl="joinUsImg" />
+      <component
+        v-bind:is="Banner"
+        v-bind:imageUrl="GithubImg"
+        v-bind:link="devGithubLink"
+      />
+      <component
+        v-bind:is="Banner"
+        v-bind:imageUrl="joinUsImg"
+        v-bind:link="telegramLink"
+      />
+      <component
+        v-bind:is="Banner"
+        v-bind:imageUrl="hackathonImg"
+        v-bind:link="hackathonLink"
+      />
     </div>
 
     <div id="navigation">
@@ -244,6 +266,9 @@ const telegramLink = "https://t.me/dex_night";
 
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
+
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .slider::-webkit-scrollbar {
