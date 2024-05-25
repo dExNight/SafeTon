@@ -21,12 +21,11 @@ import Nft from "./Nft.vue";
 .nft-page {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+
   flex-wrap: wrap;
 
   gap: 5vh;
-  padding: 0;
   margin-top: 0;
 
   width: 100%;

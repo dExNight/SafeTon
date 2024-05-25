@@ -24,10 +24,8 @@
   border-radius: 20px;
   overflow: auto;
 
-  width: 30%;
-  height: 17%;
-  min-width: 180px;
-  min-height: 245px;
+  width: 180px;
+  height: 245px;
 
   flex-direction: column;
   color: white;
