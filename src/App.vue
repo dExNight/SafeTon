@@ -16,6 +16,8 @@ import {
 } from "./hooks/useTonConnect";
 import Wallet from "./components/JettonPage.vue";
 import NFT from "./components/NftPage.vue";
+import Jetton from "./components/Jetton.vue";
+import Banner from "./components/Banner.vue";
 
 const selectedNavItem: Ref = ref("Jettons");
 
@@ -86,6 +88,9 @@ onMounted(() => {
     { immediate: true }
   );
 });
+
+const joinUsImg = "https://imgbly.com/ib/ZG9P9a9zII.jpg";
+const telegramLink = "https://t.me/dex_night";
 </script>
 
 <template>
@@ -100,6 +105,12 @@ onMounted(() => {
       <p class="address" v-if="connected_address" @click="copyToClipboard">
         {{ slashed_address(connected_address) }}
       </p>
+    </div>
+
+    <div class="slider">
+      <component v-bind:is="Banner" v-bind:imageUrl="joinUsImg" v-bind:link="telegramLink" />
+      <component v-bind:is="Banner" v-bind:imageUrl="joinUsImg" />
+      <component v-bind:is="Banner" v-bind:imageUrl="joinUsImg" />
     </div>
 
     <div id="navigation">
@@ -216,5 +227,26 @@ onMounted(() => {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 7px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  height: auto;
+  width: 100%;
+
+  min-height: 80px;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
 </style>
