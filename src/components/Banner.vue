@@ -38,7 +38,7 @@ const redirectToLink = () => {
   background-color: aliceblue; /* 50% прозрачности */
   color: white;
 
-  border-radius: 20px;
+  border-radius: 10px;
 
   overflow: hidden;
 }

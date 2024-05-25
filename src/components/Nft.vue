@@ -19,7 +19,7 @@
   background-color: rgba(51, 51, 51, 0.5); /* 50% прозрачности */
   border-radius: 20px;
   overflow: auto;
-
+  
   width: 180px;
   height: 245px;
 
@@ -35,16 +35,9 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 403px) {
-  .nft-elem {
-    width: 160px;
-    height: 215px;
-  }
-}
-
 img {
   margin-top: 0;
-  margin-bottom: 5%;
+  margin-bottom: 0;
 }
 
 p {
@@ -57,5 +50,22 @@ p {
   font-weight: 600;
   font-size: 20px;
   line-height: 36px;
+}
+
+@media (max-width: 403px) {
+  .nft-elem {
+    width: 160px;
+    height: 215px;
+
+    min-width: 160px;
+    min-height: 215px;
+  }
+
+  .suspicion {
+    color: red;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
 </style>

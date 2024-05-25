@@ -25,12 +25,14 @@
 
   min-height: 70px;
   min-width: 300px;
-  background-color: rgba(51, 51, 51, 0.5); /* 50% прозрачности */
+  background-color: rgba(100, 51, 51, 0.5); /* 50% прозрачности */
   color: white;
 
   border-radius: 20px;
 
   overflow: hidden;
+
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .amount {
