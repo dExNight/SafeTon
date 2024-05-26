@@ -68,7 +68,7 @@ export async function getUserNFTsList(user_address_str: string) {
         suspicion: "Verified",
       },
       {
-        name: "Nutcracker Nikolay II",
+        name: "Nutcracker",
         img: "https://i.getgems.io/zM19RMIz166-5br8cMtvoCmhGjBOHBgIg8M7oPpczKI/rs:fill:1000:0:1/g:ce/czM6Ly9nZXRnZW1zLW5mdC9uZnQvYi9jLzY1ODAxNmFiYzYxNjMzOGVjN2VlYzFlNC9pbWcvbnV0cy9uaWtvbGF5XzIucG5n",
         suspicion: "SCAM",
       },
