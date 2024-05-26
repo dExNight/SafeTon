@@ -1,10 +1,30 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { defineProps } from "vue";
+
+const props = defineProps({
+  name: String,
+  img: String,
+  suspicion: String,
+});
+
+// #0f2442
+</script>
 
 <template>
   <div class="nft-elem">
-    <img src="../assets/nft.png" height="70%" width="100%" />
-    <p class="nft-name">Passport</p>
-    <p class="suspicion">SCAM</p>
+    <img :src="props.img" height="70%" width="100%" />
+    <p class="nft-name">{{ props.name }}</p>
+    <p
+      class="suspicion"
+      :style="{
+        color:
+          props.suspicion === 'SCAM'
+            ? 'red'
+            : 'green',
+      }"
+    >
+      {{ props.suspicion }}
+    </p>
   </div>
 </template>
 
@@ -46,7 +66,6 @@ p {
 }
 
 .suspicion {
-  color: red;
   font-weight: 600;
   font-size: 20px;
   line-height: 36px;

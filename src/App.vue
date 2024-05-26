@@ -16,8 +16,8 @@ import {
 } from "./hooks/useTonConnect";
 import Wallet from "./components/JettonPage.vue";
 import NFT from "./components/NftPage.vue";
-import Jetton from "./components/Jetton.vue";
 import Banner from "./components/Banner.vue";
+import { getBalance } from "./hooks/fetchUserData";
 
 const selectedNavItem: Ref = ref("Jettons");
 
@@ -36,6 +36,8 @@ const userWallet = ref(null);
 
 const connected_address = ref(null);
 const connectionStatus = ref(false);
+
+const wallet_balance = ref();
 
 let currentApp: any = shallowRef(Wallet);
 
@@ -80,9 +82,22 @@ onMounted(() => {
     selectedNavItem,
     () => {
       if (selectedNavItem.value === "Jettons") {
+        console.log("Jettons Immediate");
         currentApp.value = Wallet;
       } else if (selectedNavItem.value === "NFTs") {
         currentApp.value = NFT;
+      }
+    },
+    { immediate: true }
+  );
+
+  watch(
+    connected_address,
+    async () => {
+      if (connected_address.value) {
+        setData(wallet_balance, await getBalance(connected_address.value));
+      } else {
+        setData(wallet_balance, null);
       }
     },
     { immediate: true }
@@ -107,10 +122,10 @@ const hackathonLink =
   <div id="header"></div>
 
   <div id="main">
-    <div class="wallet-info">
+    <div class="wallet-info" v-if="wallet_balance">
       <div class="balance">
         <img class="balance-image" src="./assets/toncoin.png" height="30px" />
-        <p class="balance-value">1.88</p>
+        <p class="balance-value">{{ wallet_balance }}</p>
       </div>
       <p class="address" v-if="connected_address" @click="copyToClipboard">
         {{ slashed_address(connected_address) }}
@@ -135,7 +150,7 @@ const hackathonLink =
       />
     </div>
 
-    <div id="navigation">
+    <div id="navigation" v-if="connected_address">
       <div class="nav-item" @click="selectNavItem('Jettons')">
         <p :class="{ 'nav-text-selected': selectedNavItem === 'Jettons' }">
           Jettons
@@ -146,7 +161,11 @@ const hackathonLink =
         <p :class="{ 'nav-text-selected': selectedNavItem === 'NFTs' }">NFTs</p>
       </div>
     </div>
-    <component v-bind:is="currentApp" />
+    <component
+      v-if="connected_address"
+      v-bind:is="currentApp"
+      v-bind:wallet_address="connected_address"
+    />
   </div>
 </template>
 

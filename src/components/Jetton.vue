@@ -1,15 +1,37 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { defineProps } from "vue";
+
+const props = defineProps({
+  name: String,
+  img: String,
+  value: Number,
+  suspicion: String,
+});
+</script>
 
 <template>
-  <div class="jetton-elem">
-    <img src="../assets/suspicious_jetton.png" height="45px" />
+  <div
+    class="jetton-elem"
+    :style="{
+      backgroundColor:
+        props.suspicion === 'SCAM'
+          ? 'rgba(100, 51, 51, 0.5)'
+          : 'rgba(51, 51, 51, 0.5)',
+    }"
+  >
+    <img :src="props.img" height="45px" />
 
     <div class="jetton-info">
-      <p class="name">KINGY</p>
-      <p class="suspicion">Suspicious</p>
+      <p class="name">{{ props.name }}</p>
+      <p
+        class="suspicion"
+        :style="{ color: props.suspicion === 'SCAM' ? 'brown' : 'green' }"
+      >
+        {{ props.suspicion }}
+      </p>
     </div>
 
-    <p class="amount">1000</p>
+    <p class="amount">{{ props.value }}</p>
   </div>
 </template>
 
