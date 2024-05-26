@@ -19,8 +19,8 @@ const props = defineProps({
       :style="{
         color:
           props.suspicion === 'SCAM'
-            ? 'red'
-            : 'green',
+            ? '#d40202'
+            : '#23db2c',
       }"
     >
       {{ props.suspicion }}
@@ -44,6 +44,8 @@ const props = defineProps({
   height: 245px;
 
   flex-direction: column;
+
+  font-family: Montserrat, sans-serif;
   color: white;
 
   font-style: normal;
@@ -52,7 +54,7 @@ const props = defineProps({
   line-height: 36px;
 
   overflow: hidden;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 img {
@@ -84,7 +86,7 @@ p {
   }
 
   .suspicion {
-    color: red;
+    color: #d40202;
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
@@ -104,7 +106,7 @@ p {
   }
 
   .suspicion {
-    color: red;
+    color: #d40202;
     font-weight: 600;
     font-size: 13px;
     line-height: 26px;
@@ -124,7 +126,7 @@ p {
   }
 
   .suspicion {
-    color: red;
+    color: #d40202;
     font-weight: 600;
     font-size: 10px;
     line-height: 22px;

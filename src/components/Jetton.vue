@@ -25,7 +25,7 @@ const props = defineProps({
       <p class="name">{{ props.name }}</p>
       <p
         class="suspicion"
-        :style="{ color: props.suspicion === 'SCAM' ? 'brown' : 'green' }"
+        :style="{ color: props.suspicion === 'SCAM' ? '#d40202' : '#23db2c' }"
       >
         {{ props.suspicion }}
       </p>
@@ -51,10 +51,8 @@ const props = defineProps({
   color: white;
 
   border-radius: 20px;
-
   overflow: hidden;
-
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .amount {
@@ -88,8 +86,6 @@ img {
 
 .suspicion {
   margin: 0;
-
-  color: brown;
   font-weight: 600;
 }
 </style>
