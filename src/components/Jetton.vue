@@ -15,7 +15,7 @@ const props = defineProps({
     :style="{
       backgroundColor:
         props.suspicion === 'SCAM'
-          ? 'rgba(100, 51, 51, 0.5)'
+          ? 'rgba(51, 51, 51, 0.5)'
           : 'rgba(51, 51, 51, 0.5)',
     }"
   >
