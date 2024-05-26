@@ -278,7 +278,7 @@ const hackathonLink =
   height: auto;
   width: 100%;
 
-  min-height: 80px;
+  min-height: 90px;
 
   overflow-x: scroll;
   overflow-y: hidden;

@@ -21,19 +21,17 @@ const redirectToLink = () => {
 
 <style scoped>
 .banner-elem {
-  height: 15%;
-
   display: flex;
   align-items: center;
 
   margin-bottom: 20px;
   margin-left: 20px;
 
-  min-height: 100%;
+  min-height: 90px;
   min-width: 200px;
 
   max-width: 200px;
-  max-height: 100px;
+  max-height: 90px;
 
   background-color: aliceblue; /* 50% прозрачности */
   color: white;
